@@ -25,3 +25,10 @@ GPIO.output(13, True)
 Reading input pins:
 value = GPIO.input(13)
 """
+
+"""
+PWM
+pwm_obj = GPIO.PWM(18, 400)  #Second argument is the frequency
+pwm_obj.start(100) # Argument is the duty cycle (percentage)
+pwm_obj.ChangeDutyCycle(50)
+"""
