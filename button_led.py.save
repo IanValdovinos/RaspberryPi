@@ -1,0 +1,11 @@
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BOARD)
+
+led_pin = 8
+GPIO.setup(led_pin, GPIO.OUT)
+
+button_pin = 1
+0
+
+GPIO.output(led_pin, False)
