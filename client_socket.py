@@ -21,12 +21,14 @@ host = socket.gethostbyname("www.google.com") # Gets IP address by a domain name
 mysock.connect((host, 80)) # Connect client to host. 80 refers to port 8 for web traffic
 
 # 3. Send some data
-message = "GET / HTTP/1.1\r\n\r\n" # HTTP GET request
+message = b"GET / HTTP/1.1\r\n\r\n" # HTTP GET request
+# The prefix b converts the string to a bytes-like object
 
 mysock.sendall(message)
 
 # 4. Receive some data
 data = mysock.recv(1000) # Argument is the maximum number of bytes expected
+print(data)
 
 # 5. Closing a socket
 mysock.close()
