@@ -15,8 +15,8 @@ sensor_pin = 12
 GPIO.setup(sensor_pin, GPIO.IN)
 
 # Twilio credentials used to gain access to Twilio services 
-account_sid = "AC4e2b196433f2195eb0a701ea9da9744d"
-auth_token = "2e7d676879c9a4f15e5ad34e3bb2e2b5"
+account_sid = ""
+auth_token = ""
 
 # Client setup
 client = Client(account_sid, auth_token)
