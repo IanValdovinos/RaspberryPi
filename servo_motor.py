@@ -15,14 +15,16 @@ pwm = GPIO.PWM(32, 50)
 pwm.start(0)
 print("PWM pin is ready to go")
 
-for i in range(10):
-    print("Moving servo to the RIGHT")
-    pwm.ChangeDutyCycle(i)
-    time.sleep(0.5)
+while True:
 
-for i in range(10, 0, -1):
-    print("Moving servo to the LEFT")
-    pwm.ChangeDutyCycle(i)
-    time.sleep(0.5)
+    for i in range(1, 10):
+        print("Moving servo to the RIGHT")
+        pwm.ChangeDutyCycle(i)
+        time.sleep(0.5)
+
+    for i in range(10, 1, -1):
+        print("Moving servo to the LEFT")
+        pwm.ChangeDutyCycle(i)
+        time.sleep(0.5)
 
 print("Pogram finished")
