@@ -44,7 +44,6 @@ user_pk = user_info['user']['pk']
 user_feed = instagram.user_feed(user_pk, count=1)
 last_post_pk = user_feed['items'][0]['pk']
 
-instagram.post_comment(last_post_pk, comment)
 
 new_post_id = last_post_pk
 while new_post_id == last_post_pk:
