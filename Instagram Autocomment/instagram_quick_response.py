@@ -36,7 +36,7 @@ def blink_listening_led():
 my_username = "valdovinos.samuel"
 my_password = "Sam132435!"
 profile_to_track_username = 'd.j.valdovinos'
-comment = "Nice!!"
+comment = "Looks amazing!!!"
 
 instagram = Client(username=my_username, password=my_password)
 user_info = instagram.username_info(profile_to_track_username)
@@ -46,8 +46,10 @@ last_post_pk = user_feed['items'][0]['pk']
 
 
 new_post_id = last_post_pk
+attempt_counter = 1
 while new_post_id == last_post_pk:
-    print('No new post.')
+    print('No new post. Attempt number: {}'.format(attempt_counter))
+    attempt_counter += 1
     user_feed = instagram.user_feed(user_pk, count=1)
     new_post_id = user_feed['items'][0]['pk']
     blink_listening_led()
